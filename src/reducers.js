@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import { DEAL, DRAW, HELD_CARD } from './actions';
+import { DEAL_CARDS, DRAW_CARDS, TOGGLE_CARD, CALC_POINTS } from './actions';
 
 function Deck (state = [], action) {
     switch (action.type) {
-      case DEAL:
+      case DEAL_CARDS:
         return [
           ...state,
           {
@@ -11,7 +11,7 @@ function Deck (state = [], action) {
             completed: false
           }
         ]
-      case DRAW:
+      case DRAW_CARDS:
         return state.map((todo, index) => {
           if (index === action.index) {
             return Object.assign({}, todo, {
