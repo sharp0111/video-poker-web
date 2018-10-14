@@ -38,9 +38,10 @@ Each hand is scored by selecting the highest **and only the highest** condition 
 ### Dependency manager
 `yarn`\
 `yarn install`
-`yarn run start`\
+`yarn start`\
 `yarn add package_name`\
-`yarn run test`
+`yarn test`
+`yarn build`
 
 ### Deployment
 GitHub Pages from `gh-pages` branch at
