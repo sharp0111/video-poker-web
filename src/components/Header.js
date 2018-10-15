@@ -1,15 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default function Header() {
-    return (<div>
-        <h1>Video Poker</h1>
-        <h2>Winning Hands:</h2>
-        <p>Straight (500 points): Five cards of consecutive rank. Example: 9<span role="img" aria-label="Spades">♠️</span>&nbsp;
-        10<span role="img" aria-label="Spades">♠️</span>&nbsp;
-        J<span role="img" aria-label="Diamons">️️♦</span>️&nbsp;
-        Q<span role="img" aria-label="Hearts">♥️</span>&nbsp;
-        K<span role="img" aria-label="Diamonds">♦️</span></p>
-        <p>Pair (100 points): Two cards of the same rank. Example: 5<span role="img" aria-label="Clubs">♣️</span>&nbsp;
-        5<span role="img" aria-label="Diamonds">♦️</span></p>
-    </div>)
+const List = styled.ul`
+    list-style-type: none;
+    width: 80%;
+    margin: auto;
+`
+
+const ListItem = styled.li``
+
+const Header = () => {
+    return(
+        <div>
+            <h1>Video Poker</h1>
+            <h2>Winning Strategies</h2>
+            <List>
+                <ListItem>Straight (500 points): Five cards of consecutive rank. Example: 9:spades: 10:spades: J:diamonds: Q:hearts: K:diamonds:</ListItem>
+                <ListItem>Pair (100 points): Two cards of the same rank. Example: 5:clubs: 5:diamonds:</ListItem>
+            </List>
+        </div>
+    );
 }
+
+export default Header;

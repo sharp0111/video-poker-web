@@ -1,14 +1,26 @@
 import { combineReducers } from 'redux';
-import { DEAL_CARDS, DRAW_CARDS, TOGGLE_CARD, CALC_POINTS } from './actions';
+import { START_GAME, DEAL_CARDS, DRAW_CARDS, TOGGLE_CARD, CALC_POINTS } from './actions';
 
-function Deck (state = [], action) {
+const initialState = {
+  card_id: 0,
+  currentScore: 0,
+  startBackCards: [],
+  dealCards: [],
+  deck: [],
+  drawnCards: []
+};
+
+function Game (state = initialState, action) {
     switch (action.type) {
+      case START_GAME:
+        return initialState.startBackCards;
       case DEAL_CARDS:
         return [
           ...state,
           {
-            text: action.text,
-            completed: false
+            type: DEAL_CARDS,
+            card_id,
+            cards
           }
         ]
       case DRAW_CARDS:
@@ -48,7 +60,7 @@ const cards = (state = [], action) => {
 }
 
 const reducers = combineReducers({
-    Deck,
+    Game,
     cards
 });
 

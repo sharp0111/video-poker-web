@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import ShowTotalScore from './components/ShowTotalScore';
-import GetCards from './containers/GetCards';
-// import UpdateScore from './containers/UpdateScore';
-import DealOrDraw from './components/DealOrDraw';
-import Cards from './components/Cards';
+import Start from './components/Start';
+// import Credit from './components/Credit';
+// import Hand from './components/Hand';
+// import Play from './components/Play';
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
         <Header />
-        <ShowTotalScore />
-        {/* <UpdateScore /> */}
-        <Cards />
-        <GetCards />
-        <DealOrDraw />
+
+        {/* <Hand /> */}
+        {/* <Play /> */}
+        {/* <Credit credit={props.credit} /> */}
       </div>
     );
   }
