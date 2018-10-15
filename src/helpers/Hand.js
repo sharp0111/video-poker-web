@@ -1,9 +1,18 @@
-//Get a New or Update the Hand
-export default function updateHand(currentHand, currentDeck) {
-	for (let i=0; i < currentHand.length; i++) {
-		if (currentHand[i].cardState === 'NOT_HELD') {
-			currentHand[i] = currentDeck.draw();
+// deal n number of cards
+const deal = (n, currDeck, currHand) => {
+	if (n) {
+		for ( let i = 0; i < n; i++ ) {
+			let dealt_card = currDeck.shift();
+			currHand.push(dealt_card);
+		}
+	} else {
+		for (let i=0; i < currHand.length; i++) {
+			if (currHand[i].held === false) {
+				currHand[i] = currDeck.shift();
+			}
 		}
 	}
-	return currentHand;
+	return currHand;
 }
+
+export default deal;

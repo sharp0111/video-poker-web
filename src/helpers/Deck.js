@@ -6,17 +6,18 @@ export const generateNewDeck = () => {
 	// creates card object
 	let card = (suit, rank) => {
 		return {
+			rank: rank,
 			suit: suit,
-			rank: rank
+			held: true
 		}
 	}
-
-	const ranks = ['2', '3','4','5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-	const suits = ['Clubs', 'Diamonds', 'Spades', 'Hearts'];
+	
+	const ranks = ['10', '2', '3','4','5', '6', '7', '8', '9', 'A', 'J', 'K', 'Q'];
+	const suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
 	
 	for ( let i = 0; i < suits.length; i++ ) {
 			for ( let j = 0; j < ranks.length; j++ ) {
-					deck.push(card(suits[i], ranks[j]));
+					deck.push(card(ranks[j], suits[i]));
 			}
 	}
 	return deck;
@@ -35,21 +36,4 @@ export const shuffle = (currDeck) => {
 	}
 	return currDeck;
 }
-// deal n number of cards
-export const deal = (n, currDeck, currHand) => {
-	for ( let i = 0; i < n; i++ ) {
-		let dealt_card = currDeck.shift();
-		currHand.push(dealt_card);
-	}
-	return currHand;
-}
 
-// Draw/Replace n number of cards
-export const draw = (currDeck, currHand, cardIdxToReplace) => {
-	let i = 0;
-	while (i < currHand.length) {
-		currHand[cardIdxToReplace] = currDeck.shift();
-		i++;
-	}
-	return currHand;
-}
