@@ -1,6 +1,5 @@
 import React from 'react';
 import { combineReducers } from 'redux';
-import { START_GAME, TOGGLE_CARD_STATE, CALCULATE_CREDIT } from '../actions';
 import { generateNewDeck, shuffle, deal, draw } from '../helpers/Deck';
 
 const initialState = {

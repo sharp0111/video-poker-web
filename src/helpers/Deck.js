@@ -1,4 +1,3 @@
-import React from 'react';
 
 // generates a deck of cards
 export const generateNewDeck = () => {
