@@ -1,3 +1,9 @@
+# Take-Home Exercise
+
+by [sweetgreen](https://www.sweetgreen.com/)
+
+Thank you for taking the time to interview at Sweetgreen. To get a better idea of how you architect and build software, we'd like to give you an opportunity to complete a short exercise.
+
 ## Specification
 
 Build a simplified, browser version of [Video Poker](https://en.wikipedia.org/wiki/Video_poker).
@@ -24,24 +30,3 @@ Each hand is scored by selecting the highest **and only the highest** condition 
 - Use any tools or technologies you think are appropriate, but keep in mind that the purpose is to showcase your skills, and excessive use of framework boilerplate, sprawled over a multitude of files might not be an ideal presentation, and can also add time
 - We're mainly looking for how you structure your logic, don't worry too much about presentation
 - Please reach out if you have any questions
-
-## Implementation
-
-### Stack
-[React](https://reactjs.org/)\
-[Redux](https://redux.js.org/)
-
-### Dependency manager
-`yarn`\
-`yarn install`
-`yarn start`\
-`yarn add package_name`\
-`yarn test`
-`yarn build`
-
-### Deployment
-GitHub Pages from `gh-pages` branch at
-[URL](https://sharp0111.github.io/video-poker-web/)
-
-### Style Code
-[standard](https://github.com/standard/standard#install)
